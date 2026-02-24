@@ -33,6 +33,7 @@ define('CURRENCY', 'KES');
 define('SITE_URL', 'https://' . $_SERVER['HTTP_HOST']);
 define('SUPPORT_EMAIL', 'support@jakisawashop.co.ke');
 define('APP_NAME', 'JAKISAWA SHOP');
+define('RESET_TOKEN_EXPIRY_MINUTES', 60);
 
 if (!function_exists('normalizeUserRole')) {
     function normalizeUserRole($role) {
