@@ -1,6 +1,11 @@
 <?php
 // login.php
-session_start();
+if (!ob_get_level()) {
+    ob_start();
+}
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Enable error reporting for debugging
 error_reporting(E_ALL);
