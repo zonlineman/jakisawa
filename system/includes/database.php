@@ -70,8 +70,3 @@ try {
     // Show user-friendly message
     die("Database connection failed. Please try again later.");
 }
-
-
-
-
-?> 
