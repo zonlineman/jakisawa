@@ -7,9 +7,43 @@ $message = 'Invalid verification link.';
 
 $email = trim($_GET['email'] ?? '');
 $token = trim($_GET['token'] ?? '');
+$verificationHours = defined('VERIFICATION_LINK_EXPIRY_HOURS') ? (int)VERIFICATION_LINK_EXPIRY_HOURS : 5;
+if ($verificationHours < 1) {
+    $verificationHours = 5;
+}
+
+function verifyUsersHasColumn(PDO $pdo, string $column): bool {
+    static $cache = [];
+    if (array_key_exists($column, $cache)) {
+        return $cache[$column];
+    }
+
+    try {
+        $stmt = $pdo->query("SHOW COLUMNS FROM users LIKE " . $pdo->quote($column));
+        $cache[$column] = (bool)$stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (Throwable $e) {
+        error_log('verifyUsersHasColumn failed for "' . $column . '": ' . $e->getMessage());
+        $cache[$column] = false;
+    }
+
+    return $cache[$column];
+}
+
+$hasVerificationExpiry = verifyUsersHasColumn($pdo, 'verification_token_expires');
 
 if ($email !== '' && $token !== '' && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $stmt = $pdo->prepare("SELECT id, email_verified FROM users WHERE email = ? AND verification_token = ? LIMIT 1");
+    if ($hasVerificationExpiry) {
+        $stmt = $pdo->prepare("
+            SELECT id, email_verified, verification_token_expires
+            FROM users
+            WHERE email = ?
+              AND verification_token = ?
+              AND (verification_token_expires IS NULL OR verification_token_expires >= NOW())
+            LIMIT 1
+        ");
+    } else {
+        $stmt = $pdo->prepare("SELECT id, email_verified FROM users WHERE email = ? AND verification_token = ? LIMIT 1");
+    }
     $stmt->execute([$email, $token]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -18,21 +52,42 @@ if ($email !== '' && $token !== '' && filter_var($email, FILTER_VALIDATE_EMAIL))
             $status = 'ok';
             $message = 'Your email is already verified. You can sign in.';
         } else {
-            $upd = $pdo->prepare("UPDATE users SET email_verified = 1, verification_token = NULL WHERE id = ? LIMIT 1");
+            if ($hasVerificationExpiry) {
+                $upd = $pdo->prepare("UPDATE users SET email_verified = 1, verification_token = NULL, verification_token_expires = NULL WHERE id = ? LIMIT 1");
+            } else {
+                $upd = $pdo->prepare("UPDATE users SET email_verified = 1, verification_token = NULL WHERE id = ? LIMIT 1");
+            }
             $upd->execute([(int)$user['id']]);
             $status = 'ok';
             $message = 'Email verified successfully. You can now sign in.';
         }
     } else {
-        $emailCheck = $pdo->prepare("SELECT id, email_verified FROM users WHERE email = ? LIMIT 1");
-        $emailCheck->execute([$email]);
-        $existing = $emailCheck->fetch(PDO::FETCH_ASSOC);
-        if ($existing && (int)($existing['email_verified'] ?? 0) === 1) {
-            $status = 'ok';
-            $message = 'Your email is already verified. You can sign in.';
-        } else {
-            $status = 'error';
-            $message = 'Verification link is invalid or expired. Please sign in.';
+        if ($hasVerificationExpiry) {
+            $expiredCheck = $pdo->prepare("SELECT id, email_verified, verification_token_expires FROM users WHERE email = ? AND verification_token = ? LIMIT 1");
+            $expiredCheck->execute([$email, $token]);
+            $expiredMatch = $expiredCheck->fetch(PDO::FETCH_ASSOC);
+            if (
+                $expiredMatch
+                && (int)($expiredMatch['email_verified'] ?? 0) !== 1
+                && !empty($expiredMatch['verification_token_expires'])
+                && strtotime((string)$expiredMatch['verification_token_expires']) < time()
+            ) {
+                $status = 'error';
+                $message = 'This verification link expired. Please sign up again to get a new link (valid for ' . $verificationHours . ' hours).';
+            }
+        }
+
+        if ($status !== 'error' || $message === 'Invalid verification link.') {
+            $emailCheck = $pdo->prepare("SELECT id, email_verified FROM users WHERE email = ? LIMIT 1");
+            $emailCheck->execute([$email]);
+            $existing = $emailCheck->fetch(PDO::FETCH_ASSOC);
+            if ($existing && (int)($existing['email_verified'] ?? 0) === 1) {
+                $status = 'ok';
+                $message = 'Your email is already verified. You can sign in.';
+            } else {
+                $status = 'error';
+                $message = 'Verification link is invalid or expired. Please sign in.';
+            }
         }
     }
 }

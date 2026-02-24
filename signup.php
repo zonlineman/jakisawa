@@ -9,6 +9,43 @@ if (isset($_SESSION['user_id'])) {
 
 $error = '';
 $success = '';
+$verificationHours = defined('VERIFICATION_LINK_EXPIRY_HOURS') ? (int)VERIFICATION_LINK_EXPIRY_HOURS : 5;
+if ($verificationHours < 1) {
+    $verificationHours = 5;
+}
+
+function usersHasColumn(PDO $pdo, string $column, bool $refresh = false): bool {
+    static $cache = [];
+    if (!$refresh && array_key_exists($column, $cache)) {
+        return $cache[$column];
+    }
+
+    try {
+        $stmt = $pdo->query("SHOW COLUMNS FROM users LIKE " . $pdo->quote($column));
+        $cache[$column] = (bool)$stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (Throwable $e) {
+        error_log('usersHasColumn check failed for "' . $column . '": ' . $e->getMessage());
+        $cache[$column] = false;
+    }
+
+    return $cache[$column];
+}
+
+function ensureVerificationTokenExpiryColumn(PDO $pdo): bool {
+    if (usersHasColumn($pdo, 'verification_token_expires')) {
+        return true;
+    }
+
+    try {
+        $pdo->exec("ALTER TABLE users ADD COLUMN verification_token_expires DATETIME NULL");
+    } catch (Throwable $e) {
+        error_log('Could not add verification_token_expires column: ' . $e->getMessage());
+    }
+
+    return usersHasColumn($pdo, 'verification_token_expires', true);
+}
+
+$hasVerificationTokenExpiry = ensureVerificationTokenExpiryColumn($pdo);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fullName = trim($_POST['full_name'] ?? '');
@@ -42,12 +79,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('Refresh: 2; url=login.php?email=' . urlencode($email));
             } else {
                 $token = generateVerificationToken();
-                $verifyStmt = $pdo->prepare("UPDATE users SET verification_token = ? WHERE id = ? LIMIT 1");
-                $verifyStmt->execute([$token, (int)$existingUser['id']]);
+                if ($hasVerificationTokenExpiry) {
+                    $verifyStmt = $pdo->prepare("UPDATE users SET verification_token = ?, verification_token_expires = DATE_ADD(NOW(), INTERVAL {$verificationHours} HOUR) WHERE id = ? LIMIT 1");
+                    $verifyStmt->execute([$token, (int)$existingUser['id']]);
+                } else {
+                    $verifyStmt = $pdo->prepare("UPDATE users SET verification_token = ? WHERE id = ? LIMIT 1");
+                    $verifyStmt->execute([$token, (int)$existingUser['id']]);
+                }
 
                 $mailSent = sendCustomerVerificationEmail($email, $fullName !== '' ? $fullName : 'Customer', $token);
                 if ($mailSent) {
-                    $success = 'Your account exists but email is not verified. A fresh verification link has been sent. Verify before signing in.';
+                    $success = 'Your account exists but email is not verified. A fresh verification link has been sent and is valid for ' . $verificationHours . ' hours.';
                 } else {
                     $error = 'Your account exists but email is not verified. We could not send the verification email right now.';
                 }
@@ -55,19 +97,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $hash = password_hash($password, PASSWORD_DEFAULT);
             $token = generateVerificationToken();
-            $insertStmt = $pdo->prepare("
-                INSERT INTO users (full_name, email, phone, password_hash, role, status, email_verified, verification_token, created_at)
-                VALUES (?, ?, ?, ?, 'customer', 'active', 0, ?, NOW())
-            ");
-
-            $insertStmt->execute([$fullName, $email, $phone, $hash, $token]);
+            if ($hasVerificationTokenExpiry) {
+                $insertStmt = $pdo->prepare("
+                    INSERT INTO users (full_name, email, phone, password_hash, role, status, email_verified, verification_token, verification_token_expires, created_at)
+                    VALUES (?, ?, ?, ?, 'customer', 'active', 0, ?, DATE_ADD(NOW(), INTERVAL {$verificationHours} HOUR), NOW())
+                ");
+                $insertStmt->execute([$fullName, $email, $phone, $hash, $token]);
+            } else {
+                $insertStmt = $pdo->prepare("
+                    INSERT INTO users (full_name, email, phone, password_hash, role, status, email_verified, verification_token, created_at)
+                    VALUES (?, ?, ?, ?, 'customer', 'active', 0, ?, NOW())
+                ");
+                $insertStmt->execute([$fullName, $email, $phone, $hash, $token]);
+            }
 
             unset($_SESSION['admin_id'], $_SESSION['admin_email'], $_SESSION['admin_name'], $_SESSION['admin_role']);
             unset($_SESSION['user_id'], $_SESSION['full_name'], $_SESSION['email'], $_SESSION['phone'], $_SESSION['role']);
 
             $mailSent = sendCustomerVerificationEmail($email, $fullName, $token);
             if ($mailSent) {
-                $success = 'Account created. Verification link sent to your email. Verify your email before signing in.';
+                $success = 'Account created. Verification link sent to your email (valid for ' . $verificationHours . ' hours). Verify your email before signing in.';
             } else {
                 $error = 'Account created, but verification email could not be sent. Please contact support.';
             }

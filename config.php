@@ -68,6 +68,7 @@ define('SMTP_USER', 'support@jakisawashop.co.ke');
 define('SMTP_PASS', '#@Support,2026');
 define('SMTP_PORT', 465);
 define('SMTP_SECURE', 'ssl');
+if (!defined('VERIFICATION_LINK_EXPIRY_HOURS')) define('VERIFICATION_LINK_EXPIRY_HOURS', 5);
 
 // SMS Settings
 if (!defined('SMS_PROVIDER')) define('SMS_PROVIDER', 'none');
@@ -109,8 +110,14 @@ function getCustomerPublicPath($relativePath) {
 }
 
 function sendCustomerVerificationEmail($toEmail, $toName, $token) {
+    $toEmail = trim((string)$toEmail);
     if ($toEmail === '' || $token === '') {
         return false;
+    }
+
+    $expiryHours = defined('VERIFICATION_LINK_EXPIRY_HOURS') ? (int)VERIFICATION_LINK_EXPIRY_HOURS : 5;
+    if ($expiryHours < 1) {
+        $expiryHours = 5;
     }
 
     // Load PHPMailer
@@ -151,12 +158,21 @@ function sendCustomerVerificationEmail($toEmail, $toName, $token) {
                     Verify Email</a>
                 </p>
                 <p>Or copy this link: <a href='{$verifyUrl}'>{$verifyUrl}</a></p>
+                <p>This verification link expires in {$expiryHours} hours.</p>
                 <p>This link was requested for your account on " . SITE_NAME . ".</p>
             </body>
             </html>
         ";
+        $mail->AltBody = "Hello " . ($toName ?: 'Customer') . ",\n\n"
+            . "Verify your email using this link:\n{$verifyUrl}\n\n"
+            . "This verification link expires in {$expiryHours} hours.";
 
+        $startedAt = microtime(true);
         $mail->send();
+        $elapsedMs = (int) round((microtime(true) - $startedAt) * 1000);
+        if ($elapsedMs >= 4000) {
+            error_log('Verification email SMTP send latency: ' . $elapsedMs . 'ms to ' . $toEmail);
+        }
         return true;
 
     } catch (\PHPMailer\PHPMailer\Exception $e) {

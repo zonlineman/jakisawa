@@ -27,6 +27,37 @@ $form_data = [
     'phone' => '',
     'role' => 'customer'
 ];
+$verificationHours = defined('VERIFICATION_LINK_EXPIRY_HOURS') ? (int)VERIFICATION_LINK_EXPIRY_HOURS : 5;
+if ($verificationHours < 1) {
+    $verificationHours = 5;
+}
+
+function systemUsersHasColumn(mysqli $conn, string $column, bool $refresh = false): bool {
+    static $cache = [];
+    if (!$refresh && array_key_exists($column, $cache)) {
+        return $cache[$column];
+    }
+
+    $safeColumn = mysqli_real_escape_string($conn, $column);
+    $result = mysqli_query($conn, "SHOW COLUMNS FROM users LIKE '{$safeColumn}'");
+    $cache[$column] = $result ? (mysqli_num_rows($result) > 0) : false;
+
+    if ($result instanceof mysqli_result) {
+        mysqli_free_result($result);
+    }
+    return $cache[$column];
+}
+
+function ensureSystemVerificationTokenExpiryColumn(mysqli $conn): bool {
+    if (systemUsersHasColumn($conn, 'verification_token_expires')) {
+        return true;
+    }
+
+    @mysqli_query($conn, "ALTER TABLE users ADD COLUMN verification_token_expires DATETIME NULL");
+    return systemUsersHasColumn($conn, 'verification_token_expires', true);
+}
+
+$hasVerificationTokenExpiry = ensureSystemVerificationTokenExpiryColumn($conn);
 
 function sendSystemVerificationEmail($toEmail, $toName, $token) {
     $toEmail = trim((string)$toEmail);
@@ -43,6 +74,11 @@ function sendSystemVerificationEmail($toEmail, $toName, $token) {
     $verifyEntryPath = '/verify-email.php';
     $verifyUrl = $scheme . '://' . $host . $projectBase . $verifyEntryPath . '?email='
         . urlencode($toEmail) . '&token=' . urlencode($token);
+
+    $expiryHours = defined('VERIFICATION_LINK_EXPIRY_HOURS') ? (int)VERIFICATION_LINK_EXPIRY_HOURS : 5;
+    if ($expiryHours < 1) {
+        $expiryHours = 5;
+    }
 
     $safeName = trim((string)$toName) !== '' ? trim((string)$toName) : 'User';
     $subject = 'Verify your email - ' . (defined('SITE_NAME') ? SITE_NAME : 'JAKISAWA SHOP');
@@ -101,10 +137,16 @@ function sendSystemVerificationEmail($toEmail, $toName, $token) {
                 <p><a href=\"" . htmlspecialchars($verifyUrl, ENT_QUOTES, 'UTF-8') . "\">Verify Email</a></p>
                 <p>If the button does not work, copy and paste this URL into your browser:</p>
                 <p>" . htmlspecialchars($verifyUrl, ENT_QUOTES, 'UTF-8') . "</p>
+                <p>This verification link expires in {$expiryHours} hours.</p>
                 <p>If you did not create this account, please ignore this email.</p>
             ";
-            $mail->AltBody = "Hello {$safeName},\n\nPlease verify your email:\n{$verifyUrl}\n\nIf you did not create this account, ignore this email.";
+            $mail->AltBody = "Hello {$safeName},\n\nPlease verify your email:\n{$verifyUrl}\n\nThis verification link expires in {$expiryHours} hours.\n\nIf you did not create this account, ignore this email.";
+            $startedAt = microtime(true);
             $mail->send();
+            $elapsedMs = (int) round((microtime(true) - $startedAt) * 1000);
+            if ($elapsedMs >= 4000) {
+                error_log('Verification email SMTP send latency: ' . $elapsedMs . 'ms to ' . $toEmail);
+            }
             return true;
         } catch (Throwable $e) {
             error_log('Verification email SMTP send failed: ' . $e->getMessage());
@@ -114,6 +156,7 @@ function sendSystemVerificationEmail($toEmail, $toName, $token) {
     // Fallback to native mail()
     $message = "Hello {$safeName},\n\n"
         . "Please verify your email by opening this link:\n{$verifyUrl}\n\n"
+        . "This verification link expires in {$expiryHours} hours.\n\n"
         . "If you did not create this account, please ignore this message.\n";
     $headers = "MIME-Version: 1.0\r\n"
         . "Content-Type: text/plain; charset=UTF-8\r\n"
@@ -193,8 +236,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } catch (Exception $e) {
             $verification_token = sha1(uniqid('verify_', true));
         }
-        $insert_sql = "INSERT INTO users (full_name, email, phone, password_hash, role, status, email_verified, verification_token, created_at) 
-                      VALUES (?, ?, ?, ?, ?, ?, 0, ?, NOW())";
+        if ($hasVerificationTokenExpiry) {
+            $insert_sql = "INSERT INTO users (full_name, email, phone, password_hash, role, status, email_verified, verification_token, verification_token_expires, created_at) 
+                          VALUES (?, ?, ?, ?, ?, ?, 0, ?, DATE_ADD(NOW(), INTERVAL {$verificationHours} HOUR), NOW())";
+        } else {
+            $insert_sql = "INSERT INTO users (full_name, email, phone, password_hash, role, status, email_verified, verification_token, created_at) 
+                          VALUES (?, ?, ?, ?, ?, ?, 0, ?, NOW())";
+        }
         
         $stmt = mysqli_prepare($conn, $insert_sql);
         mysqli_stmt_bind_param($stmt, "sssssss", 
@@ -211,9 +259,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mailSent = sendSystemVerificationEmail($form_data['email'], $form_data['full_name'], $verification_token);
             
             if ($status === 'pending') {
-                $success = "Registration submitted! Verify your email first, then wait for admin approval.";
+                $success = "Registration submitted! Verify your email first (link valid for {$verificationHours} hours), then wait for admin approval.";
             } else {
-                $success = "Registration successful. Verify your email before login.";
+                $success = "Registration successful. Verify your email before login (link valid for {$verificationHours} hours).";
             }
 
             if (!$mailSent) {
