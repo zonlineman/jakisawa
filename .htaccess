@@ -1,0 +1,68 @@
+# Enable the rewrite engine
+RewriteEngine On
+
+# If you're in a subdirectory, adjust the path
+# Example: RewriteBase /your-project/
+
+# Redirect all API calls to api.php
+RewriteRule ^api/(.*)$ api.php?action=$1 [QSA,L]
+
+# Redirect everything else to index.php (for your main app)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Disable directory listing
+Options -Indexes
+
+# Security headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+
+# Set PHP settings (if allowed)
+<IfModule mod_php.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+    php_value memory_limit 256M
+</IfModule>
+
+# Handle 404 errors
+ErrorDocument 404 /index.php
+
+# Cache static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    # CSS, JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# Compress text files
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "(\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)|~)$">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+# Protect the .htaccess file itself
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>

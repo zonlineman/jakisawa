@@ -1,0 +1,195 @@
+
+.actions-column .btn {
+    position: relative;
+    /* z-index: 1; */
+}
+
+/* Check if something is covering the buttons */
+.table tbody tr {
+    position: relative;
+}
+
+.stat-card {
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid transparent;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #dee2e6;
+}
+
+.placeholder-image {
+    width: 60px;
+    height: 60px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    border: 2px dashed #dee2e6;
+}
+
+.actions-column {
+    min-width: 190px;
+}
+
+.actions-column .btn {
+    padding: 0.2rem 0.45rem;
+}
+
+.btn-group-sm .btn {
+    padding: 0.25rem 0.5rem;
+}
+
+.table-responsive {
+    min-height: 320px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.remedies-table {
+    width: 100%;
+    min-width: 100%;
+    table-layout: fixed;
+}
+
+.remedies-table th,
+.remedies-table td {
+    vertical-align: middle;
+}
+
+.remedies-table .col-name {
+    width: 30%;
+    max-width: 320px;
+}
+
+.remedies-table .col-name .fw-medium {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2;
+}
+
+.remedies-table .col-image .placeholder-image {
+    margin: 0 auto;
+}
+
+.stock-low {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.stock-warning {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.stock-good {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.featured-badge {
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    color: #000;
+}
+
+.quick-actions .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.top-bar {
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #212529;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.2;
+}
+
+/* Modal styles */
+.modal-xl {
+    max-width: 1200px;
+}
+
+.form-section {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-section h6 {
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 14px;
+    }
+
+    .page-title {
+        font-size: 1.2rem;
+    }
+
+    .actions-column {
+        min-width: 170px;
+    }
+    
+    .stat-card .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stat-icon {
+        margin: 0 auto 1rem auto;
+    }
+
+    .remedies-table {
+        width: auto;
+        min-width: 860px;
+        table-layout: auto;
+    }
+}

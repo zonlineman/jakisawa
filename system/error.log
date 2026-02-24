@@ -1,0 +1,132 @@
+[13-Feb-2026 15:53:51 Europe/Berlin] POST data: Array
+(
+    [remedy_id] => 49
+    [sku] => HOI-2601-007
+    [name] => Cinnamon
+    [category_id] => 6
+    [supplier_id] => 3538
+    [description] => can be used in stoping bed-wetting
+    [ingredients] => crushed cinnamon bark
+    [usage_instructions] => take a tea spoon in a glass iof warm water and use daily
+    [unit_price] => 300
+    [cost_price] => 200
+    [discount_price] => 
+    [stock_quantity] => 46
+    [reorder_level] => 10
+    [is_featured] => 0
+    [is_active] => 1
+)
+
+[13-Feb-2026 15:53:51 Europe/Berlin] FILES data: Array
+(
+)
+
+[13-Feb-2026 15:53:51 Europe/Berlin] SQL Query: UPDATE remedies SET sku = ?, name = ?, description = ?, category_id = ?, supplier_id = ?, ingredients = ?, usage_instructions = ?, unit_price = ?, cost_price = ?, discount_price = ?, stock_quantity = ?, reorder_level = ?, is_featured = ?, is_active = ?, updated_at = NOW() WHERE id = ?
+[13-Feb-2026 15:53:51 Europe/Berlin] Params: Array
+(
+    [0] => HOI-2601-007
+    [1] => Cinnamon
+    [2] => can be used in stoping bed-wetting
+    [3] => 6
+    [4] => 3538
+    [5] => crushed cinnamon bark
+    [6] => take a tea spoon in a glass iof warm water and use daily
+    [7] => 300
+    [8] => 200
+    [9] => 
+    [10] => 46
+    [11] => 10
+    [12] => 1
+    [13] => 1
+    [14] => 49
+)
+
+[13-Feb-2026 15:53:51 Europe/Berlin] Types: sssiissdddiiiii
+[13-Feb-2026 15:54:12 Europe/Berlin] POST data: Array
+(
+    [remedy_id] => 10
+    [sku] => MAK430
+    [name] => Artemisia
+    [category_id] => 3
+    [supplier_id] => 3538
+    [description] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [ingredients] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [usage_instructions] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [unit_price] => 10
+    [cost_price] => 120
+    [discount_price] => 23
+    [stock_quantity] => 79
+    [reorder_level] => 10
+    [is_featured] => 0
+    [is_active] => 0
+)
+
+[13-Feb-2026 15:54:12 Europe/Berlin] FILES data: Array
+(
+)
+
+[13-Feb-2026 15:54:12 Europe/Berlin] SQL Query: UPDATE remedies SET sku = ?, name = ?, description = ?, category_id = ?, supplier_id = ?, ingredients = ?, usage_instructions = ?, unit_price = ?, cost_price = ?, discount_price = ?, stock_quantity = ?, reorder_level = ?, is_featured = ?, is_active = ?, updated_at = NOW() WHERE id = ?
+[13-Feb-2026 15:54:12 Europe/Berlin] Params: Array
+(
+    [0] => MAK430
+    [1] => Artemisia
+    [2] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [3] => 3
+    [4] => 3538
+    [5] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [6] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [7] => 10
+    [8] => 120
+    [9] => 23
+    [10] => 79
+    [11] => 10
+    [12] => 1
+    [13] => 1
+    [14] => 10
+)
+
+[13-Feb-2026 15:54:12 Europe/Berlin] Types: sssiissdddiiiii
+[13-Feb-2026 15:54:32 Europe/Berlin] POST data: Array
+(
+    [remedy_id] => 10
+    [sku] => MAK430
+    [name] => Artemisia
+    [category_id] => 3
+    [supplier_id] => 3538
+    [description] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [ingredients] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [usage_instructions] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [unit_price] => 10
+    [cost_price] => 120
+    [discount_price] => 23
+    [stock_quantity] => 79
+    [reorder_level] => 10
+    [is_featured] => 0
+    [is_active] => 0
+)
+
+[13-Feb-2026 15:54:32 Europe/Berlin] FILES data: Array
+(
+)
+
+[13-Feb-2026 15:54:32 Europe/Berlin] SQL Query: UPDATE remedies SET sku = ?, name = ?, description = ?, category_id = ?, supplier_id = ?, ingredients = ?, usage_instructions = ?, unit_price = ?, cost_price = ?, discount_price = ?, stock_quantity = ?, reorder_level = ?, is_featured = ?, is_active = ?, updated_at = NOW() WHERE id = ?
+[13-Feb-2026 15:54:32 Europe/Berlin] Params: Array
+(
+    [0] => MAK430
+    [1] => Artemisia
+    [2] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [3] => 3
+    [4] => 3538
+    [5] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [6] => welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome
+    [7] => 10
+    [8] => 120
+    [9] => 23
+    [10] => 79
+    [11] => 10
+    [12] => 1
+    [13] => 1
+    [14] => 10
+)
+
+[13-Feb-2026 15:54:32 Europe/Berlin] Types: sssiissdddiiiii

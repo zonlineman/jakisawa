@@ -1,0 +1,621 @@
+[16-Jan-2026 09:01:05 Europe/Berlin] PHP Fatal error:  Cannot redeclare handleCustomersEnhanced() (previously declared in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php:319) in C:\xampp\htdocs\JAKISAWA\Admin\handlers\dashboard_handler.php on line 433
+[16-Jan-2026 09:03:50 Europe/Berlin] PHP Fatal error:  Cannot redeclare handleCustomersEnhanced() (previously declared in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php:319) in C:\xampp\htdocs\JAKISAWA\Admin\handlers\dashboard_handler.php on line 433
+[16-Jan-2026 09:05:35 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\pages\inventory.php:125
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\pages\inventory.php(125): mysqli_query(Object(mysqli), 'SELECT COUNT(*)...')
+#1 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\inventory.php on line 125
+[16-Jan-2026 09:07:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function formatCurrency() in C:\xampp\htdocs\JAKISAWA\Admin\pages\inventory.php:702
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\inventory.php on line 702
+[16-Jan-2026 09:09:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function adjustBrightness() in C:\xampp\htdocs\JAKISAWA\Admin\pages\inventory.php:989
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\inventory.php on line 989
+[16-Jan-2026 09:30:39 Europe/Berlin] PHP Fatal error:  Cannot redeclare getDashboardStats() (previously declared in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:10) in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 1166
+[16-Jan-2026 09:33:40 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\JAKISAWA\Admin\pages../includes/admin_dashboard.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:33:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\JAKISAWA\Admin\pages../includes/admin_dashboard.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:33:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\JAKISAWA\Admin\pages../includes/admin_dashboard.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:33:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\JAKISAWA\Admin\pages../includes/admin_dashboard.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:34:31 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\JAKISAWA\Admin\pages../admin_dashboard.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:34:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\JAKISAWA\Admin\pages../admin_dashboard.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:34:47 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\JAKISAWA\Admin\pagesadmin_dashboard.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:34:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\JAKISAWA\Admin\pagesadmin_dashboard.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:35:24 Europe/Berlin] PHP Warning:  require_once(./admin_dashboard.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:35:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './admin_dashboard.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:35:48 Europe/Berlin] PHP Warning:  require_once(.admin_dashboard.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:35:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required '.admin_dashboard.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:36:01 Europe/Berlin] PHP Warning:  require_once(admin_dashboard.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:36:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'admin_dashboard.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:36:20 Europe/Berlin] PHP Warning:  require_once(admin_dashboard.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:36:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'admin_dashboard.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:36:41 Europe/Berlin] PHP Warning:  require_once(..admin_dashboard.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:36:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required '..admin_dashboard.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 6
+[16-Jan-2026 09:36:52 Europe/Berlin] PHP Warning:  Constant SITE_NAME already defined in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 6
+[16-Jan-2026 09:36:52 Europe/Berlin] PHP Fatal error:  Cannot redeclare handleCustomersEnhanced() (previously declared in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php:319) in C:\xampp\htdocs\JAKISAWA\Admin\handlers\dashboard_handler.php on line 433
+[16-Jan-2026 09:37:30 Europe/Berlin] PHP Fatal error:  Cannot redeclare handleCustomersEnhanced() (previously declared in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php:319) in C:\xampp\htdocs\JAKISAWA\Admin\handlers\dashboard_handler.php on line 433
+[16-Jan-2026 09:41:58 Europe/Berlin] PHP Fatal error:  Cannot redeclare getRecentOrders() (previously declared in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:49) in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php on line 69
+[16-Jan-2026 09:42:31 Europe/Berlin] PHP Fatal error:  Cannot redeclare getDashboardStats() (previously declared in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php:1135) in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 49
+[16-Jan-2026 09:43:08 Europe/Berlin] PHP Fatal error:  Cannot redeclare getRecentOrders() (previously declared in C:\xampp\htdocs\JAKISAWA\Admin\pages\dashboard.php:49) in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 73
+[16-Jan-2026 09:55:29 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 09:55:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 09:55:29 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[16-Jan-2026 09:55:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[16-Jan-2026 09:55:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getRecentOrders() in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:120
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 120
+[16-Jan-2026 09:57:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getLowStockProducts() in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:121
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 121
+[16-Jan-2026 12:39:22 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 12:39:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 12:39:22 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[16-Jan-2026 12:39:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[16-Jan-2026 12:39:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getLowStockProducts() in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:121
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 121
+[16-Jan-2026 13:58:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getLowStockProducts() in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:121
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 121
+[16-Jan-2026 14:03:42 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 14:03:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 14:03:42 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[16-Jan-2026 14:03:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[16-Jan-2026 14:03:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getLowStockProducts() in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:121
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 121
+[16-Jan-2026 14:06:22 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php:137
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php(137): mysqli->prepare('SELECT p.*, c.n...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(121): getLowStockProducts(10)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 137
+[16-Jan-2026 14:07:03 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.remedies' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php:1189
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php(1189): mysqli->query('SELECT COUNT(*)...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(119): getDashboardStats()
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 1189
+[16-Jan-2026 14:07:36 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 14:07:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 14:07:36 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[16-Jan-2026 14:07:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[16-Jan-2026 14:07:36 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.remedies' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php:1189
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php(1189): mysqli->query('SELECT COUNT(*)...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(119): getDashboardStats()
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 1189
+[16-Jan-2026 14:08:25 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php:137
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php(137): mysqli->prepare('SELECT p.*, c.n...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(121): getLowStockProducts(10)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 137
+[16-Jan-2026 14:09:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getRecentCustomers() in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:122
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 122
+[16-Jan-2026 14:11:17 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "/", expecting end of file in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 124
+[16-Jan-2026 14:11:37 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "/", expecting end of file in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 124
+[16-Jan-2026 14:11:39 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "/", expecting end of file in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 124
+[16-Jan-2026 14:11:40 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "/", expecting end of file in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 124
+[16-Jan-2026 14:11:41 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "/", expecting end of file in C:\xampp\htdocs\JAKISAWA\Admin\includes\functions.php on line 124
+[16-Jan-2026 14:12:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getSalesChartData() in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:123
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 123
+[16-Jan-2026 14:13:28 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:163
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(163): mysqli->prepare('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(182): getTopProducts(5)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 163
+[16-Jan-2026 14:15:54 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:163
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(163): mysqli->prepare('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(182): getTopProducts(5)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 163
+[16-Jan-2026 14:15:55 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:163
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(163): mysqli->prepare('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(182): getTopProducts(5)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 163
+[16-Jan-2026 14:15:56 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:163
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(163): mysqli->prepare('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(182): getTopProducts(5)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 163
+[16-Jan-2026 14:15:56 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:163
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(163): mysqli->prepare('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(182): getTopProducts(5)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 163
+[16-Jan-2026 14:15:56 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:163
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(163): mysqli->prepare('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(182): getTopProducts(5)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 163
+[16-Jan-2026 14:15:56 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:163
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(163): mysqli->prepare('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(182): getTopProducts(5)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 163
+[16-Jan-2026 14:15:57 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'JAKISAWA_SHOP.products' doesn't exist in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php:163
+Stack trace:
+#0 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(163): mysqli->prepare('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php(182): getTopProducts(5)
+#2 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\admin_dashboard.php on line 163
+[16-Jan-2026 14:18:29 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 14:18:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 17
+[16-Jan-2026 14:18:29 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[16-Jan-2026 14:18:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\admin_login.php on line 18
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:15 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:15 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:15 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:15 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:21:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 17
+[20-Jan-2026 12:22:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getDBConnection() in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php:1199
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1199
+[20-Jan-2026 12:22:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function isAdmin() in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php:1209
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1209
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:23:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:34:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:35:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1876
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1878
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:40:04 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1896
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:52:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:53:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function isAdmin() in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php:1210
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1210
+[20-Jan-2026 12:53:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function isAdmin() in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php:1210
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1210
+[20-Jan-2026 12:53:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function isAdmin() in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php:1210
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1210
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 12:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1877
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1879
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 13:01:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1897
+[20-Jan-2026 13:02:17 Europe/Berlin] Role not set in session, defaulting to 'customer'
+[20-Jan-2026 13:02:17 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1880
+[20-Jan-2026 13:02:17 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1898
+[20-Jan-2026 13:02:17 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1880
+[20-Jan-2026 13:02:17 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1898
+[20-Jan-2026 13:02:17 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1880
+[20-Jan-2026 13:02:17 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1898
+[20-Jan-2026 13:12:50 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1935
+[20-Jan-2026 13:12:50 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1953
+[20-Jan-2026 13:12:50 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1935
+[20-Jan-2026 13:12:50 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1953
+[20-Jan-2026 13:12:50 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1935
+[20-Jan-2026 13:12:50 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1953
+[20-Jan-2026 13:13:31 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1927
+[20-Jan-2026 13:13:31 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1945
+[20-Jan-2026 13:13:31 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1927
+[20-Jan-2026 13:13:31 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1945
+[20-Jan-2026 13:13:31 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1927
+[20-Jan-2026 13:13:31 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1945
+[20-Jan-2026 13:13:47 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1919
+[20-Jan-2026 13:13:47 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1937
+[20-Jan-2026 13:13:47 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1919
+[20-Jan-2026 13:13:47 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1937
+[20-Jan-2026 13:13:47 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1919
+[20-Jan-2026 13:13:47 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1937
+[20-Jan-2026 13:14:14 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1907
+[20-Jan-2026 13:14:14 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1925
+[20-Jan-2026 13:14:14 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1907
+[20-Jan-2026 13:14:14 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1925
+[20-Jan-2026 13:14:14 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1907
+[20-Jan-2026 13:14:14 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1925
+[20-Jan-2026 13:14:36 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1907
+[20-Jan-2026 13:14:36 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1925
+[20-Jan-2026 13:14:36 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1907
+[20-Jan-2026 13:14:36 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1925
+[20-Jan-2026 13:14:36 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1907
+[20-Jan-2026 13:14:36 Europe/Berlin] PHP Warning:  Undefined array key "admin_id" in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1925
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1884
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1884
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1886
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1886
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1904
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1904
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1884
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1884
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1886
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1886
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1904
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1904
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1884
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1884
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1886
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1886
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1904
+[20-Jan-2026 13:15:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\JAKISAWA\Admin\pages\user_management.php on line 1904
