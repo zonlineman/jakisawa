@@ -332,7 +332,16 @@ function ensureSignedInVerifiedCustomerAccount(PDO $pdo, $sessionUserId, array $
         throw new RuntimeException('Customer account was not found. Please sign in again.');
     }
 
-    if (array_key_exists('email_verified', $account) && (int)$account['email_verified'] !== 1) {
+    $currentRoleRaw = (string)($account['role'] ?? '');
+    $normalizedRole = normalizeUserRole($currentRoleRaw);
+    $knownRoles = ['customer', 'admin', 'staff', 'super_admin'];
+    $isAdminLikeRole = in_array($normalizedRole, ['admin', 'staff', 'super_admin'], true);
+
+    if (
+        array_key_exists('email_verified', $account)
+        && (int)$account['email_verified'] !== 1
+        && $isAdminLikeRole
+    ) {
         throw new RuntimeException('Email not verified. Verify your email before placing an order.');
     }
 
@@ -361,9 +370,6 @@ function ensureSignedInVerifiedCustomerAccount(PDO $pdo, $sessionUserId, array $
     }
 
     $columns = getUsersColumnMapForCustomerApi($pdo);
-    $currentRoleRaw = (string)($account['role'] ?? '');
-    $normalizedRole = normalizeUserRole($currentRoleRaw);
-    $knownRoles = ['customer', 'admin', 'staff', 'super_admin'];
 
     $updates = [];
     $params = [];
@@ -379,7 +385,11 @@ function ensureSignedInVerifiedCustomerAccount(PDO $pdo, $sessionUserId, array $
         $normalizedRole = 'customer';
     }
 
-    if (isset($columns['email_verified']) && (int)($account['email_verified'] ?? 0) !== 1) {
+    if (
+        isset($columns['email_verified'])
+        && (int)($account['email_verified'] ?? 0) !== 1
+        && !$isAdminLikeRole
+    ) {
         $setField($columns['email_verified'], 1);
     }
 

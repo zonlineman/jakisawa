@@ -28,9 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $error = 'Account not found.';
             $showSignupOption = true;
             $showForgotOption = true;
-        } elseif (isset($user['email_verified']) && (int)$user['email_verified'] !== 1) {
-            $error = 'Email not verified. Please verify your email before signing in.';
-            $showVerifyOption = true;
         } elseif (!password_verify($password, $user['password_hash'])) {
             $error = 'Invalid password.';
             $showForgotOption = true;
@@ -43,22 +40,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $sessionRole = 'customer';
             }
 
-            unset($_SESSION['admin_id'], $_SESSION['admin_email'], $_SESSION['admin_name'], $_SESSION['admin_role']);
-            $_SESSION['user_id'] = (int)$user['id'];
-            $_SESSION['full_name'] = $user['full_name'];
-            $_SESSION['email'] = $user['email'];
-            $_SESSION['phone'] = $user['phone'] ?? '';
-            $_SESSION['role'] = $sessionRole;
+            $isEmailVerified = !isset($user['email_verified']) || (int)$user['email_verified'] === 1;
+            $isAdminLikeRole = in_array($sessionRole, ['admin', 'staff', 'super_admin'], true);
+            if (!$isEmailVerified && $isAdminLikeRole) {
+                $error = 'Email not verified. Please verify your email before signing in.';
+                $showVerifyOption = true;
+            } else {
+                unset($_SESSION['admin_id'], $_SESSION['admin_email'], $_SESSION['admin_name'], $_SESSION['admin_role']);
+                $_SESSION['user_id'] = (int)$user['id'];
+                $_SESSION['full_name'] = $user['full_name'];
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['phone'] = $user['phone'] ?? '';
+                $_SESSION['role'] = $sessionRole;
 
-            $cartItemCount = 0;
-            if (!empty($_SESSION['cart']) && is_array($_SESSION['cart'])) {
-                foreach ($_SESSION['cart'] as $item) {
-                    $cartItemCount += (int)($item['quantity'] ?? 0);
+                $cartItemCount = 0;
+                if (!empty($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+                    foreach ($_SESSION['cart'] as $item) {
+                        $cartItemCount += (int)($item['quantity'] ?? 0);
+                    }
                 }
-            }
 
-            header('Location: ' . ($cartItemCount > 0 ? 'index.php?section=order' : 'index.php'));
-            exit();
+                header('Location: ' . ($cartItemCount > 0 ? 'index.php?section=order' : 'index.php'));
+                exit();
+            }
         }
     }
 }

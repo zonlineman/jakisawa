@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 $mailSent = sendCustomerVerificationEmail($email, $fullName !== '' ? $fullName : 'Customer', $token);
                 if ($mailSent) {
-                    $success = 'Your account exists but email is not verified. A fresh verification link has been sent and is valid for ' . $verificationHours . ' hours.';
+                    $success = 'Your account exists but email is not verified. A fresh verification link has been sent and is valid for ' . $verificationHours . ' hours. You can sign in now and continue checkout.';
                 } else {
                     $error = 'Your account exists but email is not verified. We could not send the verification email right now.';
                 }
@@ -116,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $mailSent = sendCustomerVerificationEmail($email, $fullName, $token);
             if ($mailSent) {
-                $success = 'Account created. Verification link sent to your email (valid for ' . $verificationHours . ' hours). Verify your email before signing in.';
+                $success = 'Account created. Verification link sent to your email (valid for ' . $verificationHours . ' hours). You can sign in now and continue checkout.';
             } else {
                 $error = 'Account created, but verification email could not be sent. Please contact support.';
             }
