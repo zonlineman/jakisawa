@@ -40,20 +40,91 @@ function sendSystemVerificationEmail($toEmail, $toName, $token) {
     $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
     $scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '/system/signup.php'));
     $projectBase = preg_replace('#/system$#', '', $scriptDir);
-    $verifyEntryPath = file_exists(dirname(__DIR__) . '/verify-email.php')
-        ? '/verify-email.php'
-        : '/verify-email.php';
+    $verifyEntryPath = '/verify-email.php';
     $verifyUrl = $scheme . '://' . $host . $projectBase . $verifyEntryPath . '?email='
         . urlencode($toEmail) . '&token=' . urlencode($token);
 
-    $subject = 'Verify your email - JAKISAWA SHOP';
-    $message = "Hello {$toName},\n\n"
+    $safeName = trim((string)$toName) !== '' ? trim((string)$toName) : 'User';
+    $subject = 'Verify your email - ' . (defined('SITE_NAME') ? SITE_NAME : 'JAKISAWA SHOP');
+
+    // Prefer SMTP via PHPMailer for reliable delivery.
+    $mailerBaseCandidates = [
+        dirname(__DIR__) . '/PHPMailer/src',
+        '/home1/jakisawa/public_html/PHPMailer/src',
+        '/home1/public_html/PHPMailer/src'
+    ];
+
+    $phpMailerLoaded = class_exists('\\PHPMailer\\PHPMailer\\PHPMailer');
+    if (!$phpMailerLoaded) {
+        foreach ($mailerBaseCandidates as $base) {
+            $phpMailerFile = $base . '/PHPMailer.php';
+            $smtpFile = $base . '/SMTP.php';
+            $exceptionFile = $base . '/Exception.php';
+            if (file_exists($phpMailerFile) && file_exists($smtpFile) && file_exists($exceptionFile)) {
+                require_once $exceptionFile;
+                require_once $phpMailerFile;
+                require_once $smtpFile;
+                $phpMailerLoaded = class_exists('\\PHPMailer\\PHPMailer\\PHPMailer');
+                if ($phpMailerLoaded) {
+                    break;
+                }
+            }
+        }
+    }
+
+    if ($phpMailerLoaded && defined('SMTP_HOST') && defined('SMTP_USER') && defined('SMTP_PASS') && defined('SMTP_PORT')) {
+        try {
+            $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+            $mail->isSMTP();
+            $mail->Host = SMTP_HOST;
+            $mail->SMTPAuth = true;
+            $mail->Username = SMTP_USER;
+            $mail->Password = SMTP_PASS;
+            $mail->Port = (int) SMTP_PORT;
+            if (defined('SMTP_SECURE') && (string) SMTP_SECURE !== '') {
+                $mail->SMTPSecure = (string) SMTP_SECURE;
+            }
+
+            $fromEmail = defined('SUPPORT_EMAIL') && trim((string) SUPPORT_EMAIL) !== ''
+                ? (string) SUPPORT_EMAIL
+                : (string) SMTP_USER;
+            $fromName = defined('SITE_NAME') ? (string) SITE_NAME : 'JAKISAWA SHOP';
+
+            $mail->setFrom($fromEmail, $fromName);
+            $mail->addAddress($toEmail, $safeName);
+            $mail->addReplyTo($fromEmail, $fromName);
+            $mail->isHTML(true);
+            $mail->Subject = $subject;
+            $mail->Body = "
+                <p>Hello " . htmlspecialchars($safeName, ENT_QUOTES, 'UTF-8') . ",</p>
+                <p>Please verify your email by clicking the link below:</p>
+                <p><a href=\"" . htmlspecialchars($verifyUrl, ENT_QUOTES, 'UTF-8') . "\">Verify Email</a></p>
+                <p>If the button does not work, copy and paste this URL into your browser:</p>
+                <p>" . htmlspecialchars($verifyUrl, ENT_QUOTES, 'UTF-8') . "</p>
+                <p>If you did not create this account, please ignore this email.</p>
+            ";
+            $mail->AltBody = "Hello {$safeName},\n\nPlease verify your email:\n{$verifyUrl}\n\nIf you did not create this account, ignore this email.";
+            $mail->send();
+            return true;
+        } catch (Throwable $e) {
+            error_log('Verification email SMTP send failed: ' . $e->getMessage());
+        }
+    }
+
+    // Fallback to native mail()
+    $message = "Hello {$safeName},\n\n"
         . "Please verify your email by opening this link:\n{$verifyUrl}\n\n"
         . "If you did not create this account, please ignore this message.\n";
-    $headers = "From: support@jakisawashop.co.ke\r\n"
-        . "Reply-To: support@jakisawashop.co.ke\r\n";
+    $headers = "MIME-Version: 1.0\r\n"
+        . "Content-Type: text/plain; charset=UTF-8\r\n"
+        . "From: " . (defined('SUPPORT_EMAIL') ? SUPPORT_EMAIL : 'support@jakisawashop.co.ke') . "\r\n"
+        . "Reply-To: " . (defined('SUPPORT_EMAIL') ? SUPPORT_EMAIL : 'support@jakisawashop.co.ke') . "\r\n";
 
-    return @mail($toEmail, $subject, $message, $headers);
+    $sent = @mail($toEmail, $subject, $message, $headers);
+    if (!$sent) {
+        error_log('Verification email fallback mail() failed for: ' . $toEmail);
+    }
+    return $sent;
 }
 
 // Process form submission
